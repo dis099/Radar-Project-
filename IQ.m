@@ -1,6 +1,6 @@
 %[Y,FS] = audioread('Umer_Range.m4a');
-[Y,FS] = audioread('test2_I.m4a');
-[Z,FS] = audioread('test2_Q.m4a');
+[Y,FS] = audioread('new1_I.m4a');
+[Z,FS] = audioread('new1_Q.m4a');
 c = 3e8;
 f_0 = 2.424e9;
 T_pulse = 100e-3;
@@ -37,7 +37,7 @@ imagesc(velocity,time,v2,[(max(max(v2))-35) (max(max(v2))-0)]);
 colormap('default'); 
 xlabel('Velocity (m/sec)');
 ylabel('Time (sec)');
-axis([0 40 -Inf Inf]);
+axis([0 100 -Inf Inf]);
 colorbar
 
 FFT=fft(B,4*N,2);
@@ -54,5 +54,5 @@ imagesc(velocity,time,v2,[(max(max(v2))-35) (max(max(v2))-0)]);
 colormap('default'); 
 xlabel('Velocity (m/sec)');
 ylabel('Time (sec)');
-axis([0 40 -Inf Inf]);
+axis([0 100 -Inf Inf]);
 colorbar

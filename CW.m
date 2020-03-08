@@ -1,6 +1,9 @@
-[Y,FS] = audioread('Umer_Running.m4a');
+clear all
+close all
+[Y,FS] = audioread('1.m4a');
+%[Y,FS] = audioread('Umer_Running.m4a');
 c = 3e8;
-f_0 = 2.424e9;
+f_0 = 2.425e9;
 T_pulse = 100e-3;
 N = FS*T_pulse;
 number_of_row=floor(length(Y)/N)+1;
@@ -29,5 +32,5 @@ imagesc(velocity,time,v2,[(max(max(v2))-35) (max(max(v2))-0)]);
 colormap('default'); 
 xlabel('Velocity (m/sec)');
 ylabel('Time (sec)');
-axis([0 40 -Inf Inf]);
+axis([0 50 -Inf Inf]);
 colorbar

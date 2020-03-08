@@ -1,7 +1,10 @@
+close all 
+clear all
+%[Y,FS] = audioread('1_fmcw.m4a');
 [Y,FS] = audioread('Umer_Range.m4a');
 c = 3e8;
-f_start=2.4e9;
-f_stop=2.5e9;
+f_start=2.407e9;
+f_stop=2.495e9;
 BW=f_stop-f_start;
 T_pulse = 20e-3;
 N = FS*T_pulse;
@@ -54,7 +57,7 @@ clims = [max(max(v2))-50 max(max(v2))-0];
 imagesc(range,time(1:size(v2,1)),v2,clims);
 xlabel('Range (m)');
 ylabel('Time (sec)');
-axis([0 100 -Inf Inf]);
+axis([0 50 -Inf Inf]);
 colorbar;
 
 figure()
@@ -68,5 +71,5 @@ clims = [max(max(v2))-50 max(max(v2))-0];
 imagesc(range,time(1:size(v2,1)),v2,clims);
 xlabel('Range (m)');
 ylabel('Time (sec)');
-axis([0 100 -Inf Inf]);
+axis([0 50 -Inf Inf]);
 colorbar;
